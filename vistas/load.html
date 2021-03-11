@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load</title>
+
+    <link rel="stylesheet" href="../css/load.css">
+</head>
+<body>
+    <div id="contenedor_carga">
+        <div id="carga"></div>
+    </div>
+
+    <section>
+        <img src="https://store.nintendo.com.pe/media/catalog/product/cache/1aff59ff6f21b2058ac5563c018426d7/j/u/jungle_dlc_artboardeshop_banner__1920x1080.jpg" alt="">
+    </section>
+
+    <script>
+        function carga(){
+            window.onload = function(){
+                var carga = document.getElementById("contenedor_carga");
+
+                carga.style.visibility = 'hidden';
+                carga.style.opacity = '0';
+            }
+            var contador = 1;
+            
+            window.setInterval(
+                function(){
+                    while (contador <= 10)
+                    {
+                        contador++;
+                        document.write(contador);
+                    }
+                }
+            ,3000)
+        }
+        Window.onload=carga();
+    </script>
+</body>
+</html>

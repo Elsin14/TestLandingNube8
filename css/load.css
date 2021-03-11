@@ -1,0 +1,28 @@
+#contenedor_carga{
+    background-color: rgba(250,240,245,.9);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    transition: all 1s ease;
+    z-index: 10000;
+}
+#carga{
+    border: 15px solid #ccc;
+    border-top-color: #f42af4;
+    border-top-style: groove;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+
+    /* centrar elemento en la pantalla */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    animation: girar 1.5s infinite linear;
+}
+@keyframes girar{
+    from{transform: rotate(0deg);}to{transform: rotate(360deg);}
+}
